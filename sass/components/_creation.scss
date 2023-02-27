@@ -53,8 +53,8 @@
     font-size: 24px;
 
     @include abs.media-query(abs.$screen-custom) {
-        padding-inline: 2rem;
-        padding-block-end: 2rem;
+      padding-inline: 2rem;
+      padding-block-end: 2rem;
     }
   }
 
@@ -79,9 +79,12 @@
     color: abs.$white;
 
     &--vertical-align {
-        @include abs.flex($direction: column, $justify: flex-end, $align: flex-start)
+      @include abs.flex(
+        $direction: column,
+        $justify: flex-end,
+        $align: flex-start
+      );
     }
-
 
     &--horizontal-align {
       @include abs.flex();
@@ -127,37 +130,35 @@
   // stilos independientes
 
   .item1 {
-    @include abs.backgroundImage("../../images/mobile/image-deep-earth.jpg");
+    @include abs.backgroundImage("../images/mobile/image-deep-earth.jpg");
   }
 
   .item2 {
-    @include abs.backgroundImage("../../images/mobile/image-night-arcade.jpg");
+    @include abs.backgroundImage("../images/mobile/image-night-arcade.jpg");
   }
 
   .item3 {
-    @include abs.backgroundImage("../../images/mobile/image-soccer-team.jpg");
+    @include abs.backgroundImage("../images/mobile/image-soccer-team.jpg");
   }
 
   .item4 {
-    @include abs.backgroundImage("../../images/mobile/image-grid.jpg");
+    @include abs.backgroundImage("../images/mobile/image-grid.jpg");
   }
 
   .item5 {
-    @include abs.backgroundImage("../../images/mobile/image-from-above.jpg");
+    @include abs.backgroundImage("../images/mobile/image-from-above.jpg");
   }
 
   .item6 {
-    @include abs.backgroundImage(
-      "../../images/mobile/image-pocket-borealis.jpg"
-    );
+    @include abs.backgroundImage("../images/mobile/image-pocket-borealis.jpg");
   }
 
   .item7 {
-    @include abs.backgroundImage("../../images/mobile/image-curiosity.jpg");
+    @include abs.backgroundImage("../images/mobile/image-curiosity.jpg");
   }
 
   .item8 {
-    @include abs.backgroundImage("../../images/mobile/image-fisheye.jpg");
+    @include abs.backgroundImage("../images/mobile/image-fisheye.jpg");
   }
 
   @include abs.media-query(abs.$screen-custom) {
@@ -166,48 +167,44 @@
     }
 
     .item1 {
-      @include abs.backgroundImage("../../images/desktop/image-deep-earth.jpg");
+      @include abs.backgroundImage("../images/desktop/image-deep-earth.jpg");
       grid-area: item1;
     }
 
     .item2 {
-      @include abs.backgroundImage(
-        "../../images/desktop/image-night-arcade.jpg"
-      );
+      @include abs.backgroundImage("../images/desktop/image-night-arcade.jpg");
       grid-area: item2;
     }
 
     .item3 {
-      @include abs.backgroundImage(
-        "../../images/desktop/image-soccer-team.jpg"
-      );
+      @include abs.backgroundImage("../images/desktop/image-soccer-team.jpg");
       grid-area: item3;
     }
 
     .item4 {
-      @include abs.backgroundImage("../../images/desktop/image-grid.jpg");
+      @include abs.backgroundImage("../images/desktop/image-grid.jpg");
       grid-area: item4;
     }
 
     .item5 {
-      @include abs.backgroundImage("../../images/desktop/image-from-above.jpg");
+      @include abs.backgroundImage("../images/desktop/image-from-above.jpg");
       grid-area: item5;
     }
 
     .item6 {
       @include abs.backgroundImage(
-        "../../images/desktop/image-pocket-borealis.jpg"
+        "../images/desktop/image-pocket-borealis.jpg"
       );
       grid-area: item6;
     }
 
     .item7 {
-      @include abs.backgroundImage("../../images/desktop/image-curiosity.jpg");
+      @include abs.backgroundImage("../images/desktop/image-curiosity.jpg");
       grid-area: item7;
     }
 
     .item8 {
-      @include abs.backgroundImage("../../images/desktop/image-fisheye.jpg");
+      @include abs.backgroundImage("../images/desktop/image-fisheye.jpg");
       grid-area: item8;
     }
 
