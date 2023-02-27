@@ -1,7 +1,7 @@
 @use "../abstracts" as abs;
 .root-container {
     background: {
-        image: url('/images/mobile/image-hero.jpg');
+        image: url("../images/mobile/image-hero.jpg");
         repeat: no-repeat;
         size: cover;
         position: center;
@@ -14,7 +14,7 @@
     height: 650px;
 
     @include abs.media-query(abs.$screen-sm) {
-        background-image: url('/images/desktop/image-hero.jpg');
+        background-image: url("../images/mobile/image-hero.jpg");
     }
 }
     
