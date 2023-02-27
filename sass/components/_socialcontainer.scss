@@ -1,0 +1,21 @@
+@use "../abstracts" as abs;
+
+.social {
+  &__list {
+    @include abs.flex($gap: 1rem);
+  }
+
+  &__link {
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      height: 0.175rem;
+      width: 100%;
+      background-color: abs.$white;
+      bottom: -4px;
+      left: 0;
+    }
+  }
+}

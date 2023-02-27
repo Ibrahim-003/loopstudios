@@ -1,0 +1,56 @@
+@use '../abstracts' as abs;
+
+.footer {
+    // modifiers
+    &--grid {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        gap: 1.5rem;
+
+        @include abs.media-query(abs.$screen-md) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas: 
+            "logo social"
+            "navfooter rights";
+            align-items: baseline;
+            justify-items: flex-start;
+            gap: 2rem;
+        }
+    }
+
+    @include abs.media-query(abs.$screen-md) {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        &__logo-link {
+            grid-area: logo;
+        }
+
+        .nav-footer {
+            grid-area: navfooter;
+        }
+
+        .social {
+            grid-area: social;
+            justify-self: flex-end;
+        }
+
+        .rights {
+            grid-area: rights;
+            justify-self: flex-end;
+        }
+    }
+
+    width: min(100%, 75em);
+    margin-top: 2rem;
+    margin-inline: auto;
+    padding: 3rem 1.25rem;
+    background-color: abs.$black;
+
+    .rights {
+        color: abs.$darkGray;
+    }
+
+}

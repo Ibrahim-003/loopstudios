@@ -1,0 +1,218 @@
+@use "../abstracts" as abs;
+
+.creation {
+  // modifiers
+  &--grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1.5rem;
+
+    @include abs.media-query(abs.$screen-custom) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto repeat(2, 450px);
+      grid-template-areas:
+        "title title . item9"
+        "item1 item2 item3 item4"
+        "item5 item6 item7 item8";
+
+      gap: 2rem;
+    }
+  }
+
+  &--size {
+    width: min(100%, 450px);
+    @include abs.media-query(abs.$screen-custom) {
+      width: 100%;
+    }
+  }
+
+  //children
+  &__title,
+  &__subtitle,
+  &__link {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 1rem;
+
+    @include abs.media-query(abs.$screen-custom) {
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    padding-inline: 1rem;
+    padding-block-start: 3rem;
+    padding-block-end: 1rem;
+    z-index: 10;
+    font-size: 24px;
+
+    @include abs.media-query(abs.$screen-custom) {
+        padding-inline: 2rem;
+        padding-block-end: 2rem;
+    }
+  }
+
+  &__link {
+    display: inline;
+    color: abs.$black;
+    border: 2px solid abs.$black;
+    padding-inline: 2.5rem;
+    padding-block: 0.5rem;
+    font-size: abs.$fz-xxs;
+    letter-spacing: 0.25rem;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      background-color: abs.$black;
+      color: abs.$white;
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: abs.$white;
+
+    &--vertical-align {
+        @include abs.flex($direction: column, $justify: flex-end, $align: flex-start)
+    }
+
+
+    &--horizontal-align {
+      @include abs.flex();
+
+      @include abs.media-query(abs.$screen-custom) {
+        @include abs.flex($justify: flex-end, $align: flex-start);
+      }
+    }
+
+    &--space-out {
+      margin-top: 1.5rem;
+      @include abs.media-query(abs.$screen-custom) {
+        margin: 0;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &:hover {
+      color: abs.$black;
+      cursor: pointer;
+    }
+
+    &--filter {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, hsla(0, 0%, 0%, 0.55), transparent);
+        z-index: 1;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover::before {
+        background: abs.$white;
+        opacity: 0.6;
+        color: abs.$black;
+      }
+    }
+  }
+  // stilos independientes
+
+  .item1 {
+    @include abs.backgroundImage("../../images/mobile/image-deep-earth.jpg");
+  }
+
+  .item2 {
+    @include abs.backgroundImage("../../images/mobile/image-night-arcade.jpg");
+  }
+
+  .item3 {
+    @include abs.backgroundImage("../../images/mobile/image-soccer-team.jpg");
+  }
+
+  .item4 {
+    @include abs.backgroundImage("../../images/mobile/image-grid.jpg");
+  }
+
+  .item5 {
+    @include abs.backgroundImage("../../images/mobile/image-from-above.jpg");
+  }
+
+  .item6 {
+    @include abs.backgroundImage(
+      "../../images/mobile/image-pocket-borealis.jpg"
+    );
+  }
+
+  .item7 {
+    @include abs.backgroundImage("../../images/mobile/image-curiosity.jpg");
+  }
+
+  .item8 {
+    @include abs.backgroundImage("../../images/mobile/image-fisheye.jpg");
+  }
+
+  @include abs.media-query(abs.$screen-custom) {
+    &__title {
+      grid-area: title;
+    }
+
+    .item1 {
+      @include abs.backgroundImage("../../images/desktop/image-deep-earth.jpg");
+      grid-area: item1;
+    }
+
+    .item2 {
+      @include abs.backgroundImage(
+        "../../images/desktop/image-night-arcade.jpg"
+      );
+      grid-area: item2;
+    }
+
+    .item3 {
+      @include abs.backgroundImage(
+        "../../images/desktop/image-soccer-team.jpg"
+      );
+      grid-area: item3;
+    }
+
+    .item4 {
+      @include abs.backgroundImage("../../images/desktop/image-grid.jpg");
+      grid-area: item4;
+    }
+
+    .item5 {
+      @include abs.backgroundImage("../../images/desktop/image-from-above.jpg");
+      grid-area: item5;
+    }
+
+    .item6 {
+      @include abs.backgroundImage(
+        "../../images/desktop/image-pocket-borealis.jpg"
+      );
+      grid-area: item6;
+    }
+
+    .item7 {
+      @include abs.backgroundImage("../../images/desktop/image-curiosity.jpg");
+      grid-area: item7;
+    }
+
+    .item8 {
+      @include abs.backgroundImage("../../images/desktop/image-fisheye.jpg");
+      grid-area: item8;
+    }
+
+    .item9 {
+      grid-area: item9;
+    }
+  }
+}

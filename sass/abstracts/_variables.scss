@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+// font size
+$fz-xxs: 12px;
+$fz-xs: 13px;
+$fz-sm: 14px;
+$fz-md: 16px;
+$fz-lg: 18px;
+$fz-xl: 20px;
+$fz-xxl: 22px;
+
+//primary colors
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray:hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+// Breakpoints
+$screen-sm: 36em; //576px Large smartphones
+$screen-md: 48em; //768px Small tablets
+$screen-lg: 62em; //992px Tabletsff
+$screen-custom: 64em; //1024px laptops
+$screen-xl: 75em; //1200px Desktops
+$screen-xxl: 87.5em; //1400px Large desktops
+$screen-rwd: 25.3125em; // Custom device

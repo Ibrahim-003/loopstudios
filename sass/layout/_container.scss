@@ -1,0 +1,19 @@
+@use "../abstracts" as abs;
+
+.container {
+  &--space-out {
+    margin-bottom: 2rem;
+  }
+
+  &--size-regular {
+    width: 100%;
+  }
+
+  &--theme-black {
+    background-color: abs.$black;
+  }
+
+  &--horizontal-align {
+    @include abs.flex($justify: space-between);
+  }
+}

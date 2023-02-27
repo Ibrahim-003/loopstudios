@@ -1,0 +1,20 @@
+@use '../abstracts' as abs;
+
+.main {
+    padding: 6rem 1.25rem;
+    width: min(100%, abs.$screen-xl);
+    margin: 0 auto;
+
+    @include abs.media-query(abs.$screen-custom) {
+        padding-top: 9rem;
+    }
+
+    &--vertical-align {
+        @include abs.flex($direction: column, $gap: 5.5rem);
+
+        @include abs.media-query(abs.$screen-custom) {
+            @include abs.flex($direction: column, $gap: 10.5rem)
+        }
+    }
+
+}
