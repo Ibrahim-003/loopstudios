@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution: [Repo](https://github.com/Ibrahim-003/loopstudios)
-- Live Site: [livesite](https://your-live-site-url.com)
+- Live Site: [livesite](https://ibrahim-003.github.io/loopstudios/)
 
 ## My process
 
